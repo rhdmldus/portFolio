@@ -1,12 +1,5 @@
 $(document).ready(function(){
   $('.mainText').css({animation:'fill 0.5s ease forwards 3.5s'})
-  $('#shortRiding').prepend('<img class="short" src="./images/short.png">')
-
-  $('#strollRiding').prepend('<img class="stroll" src="./images/stroll.png">')
-
-  $('#doubleRiding').prepend('<img class="double" src="./images/double.png">')
-
-  $('#longRiding').prepend('<img class="long" src="./images/long.png">')
 
 
 // 네비로페이지이동
@@ -20,52 +13,52 @@ $(document).ready(function(){
 
 
   // 마우스로 페이지이동
-  $('#headerWrap').on('mousewheel',function(){
-    var toAbout = $(this).next().position().top;
-    $('html,body').stop().animate({scrollTop:toAbout})
-    $('#gnb li').removeClass('on')
-    $('#gnb li:eq(0)').addClass('on')
+  // $('#headerWrap').on('mousewheel',function(){
+  //   var toAbout = $(this).next().position().top;
+  //   $('html,body').stop().animate({scrollTop:toAbout})
+  //   $('#gnb li').removeClass('on')
+  //   $('#gnb li:eq(0)').addClass('on')
 
-  })
-  $('#aboutSeogwang').on('mousewheel',function(){
-    $('html,body').stop().animate({scrollTop:0})
-    $('#gnb li').removeClass('on');
+  // })
+  // $('#aboutSeogwang').on('mousewheel',function(){
+  //   $('html,body').stop().animate({scrollTop:0})
+  //   $('#gnb li').removeClass('on');
 
-  })
-  $('section').on('mousewheel',function(event,delta){
-    if(delta>0){
-      var prevIndex = $(this).index()-1
-      console.log(prevIndex)
-      if(prevIndex<0){
-        prevIndex=1;
-      }
-      else{
-        $('#gnb li').removeClass('on')
-        $('#gnb li:eq('+prevIndex+')').addClass('on')
-        //
-        var pos = $(this).prev().position().top
-        $('html,body').stop().animate({scrollTop:pos})
-      }
+  // })
+  // $('section').on('mousewheel',function(event,delta){
+  //   if(delta>0){
+  //     var prevIndex = $(this).index()-1
+  //     console.log(prevIndex)
+  //     if(prevIndex<0){
+  //       prevIndex=1;
+  //     }
+  //     else{
+  //       $('#gnb li').removeClass('on')
+  //       $('#gnb li:eq('+prevIndex+')').addClass('on')
+  //       //
+  //       var pos = $(this).prev().position().top
+  //       $('html,body').stop().animate({scrollTop:pos})
+  //     }
 
-    }
+  //   }
 
-    else {
-      var nextIndex = $(this).index()+1
-      console.log(nextIndex)
-      if(nextIndex==4){
-        nextIndex=0
-      }
-      else{
-        $('#gnb li').removeClass('on')
-        $('#gnb li:eq('+nextIndex+')').addClass('on')
-        //
-        var pos = $(this).next().position().top
-        $('html,body').stop().animate({scrollTop:pos})
-      }
-      }
+  //   else {
+  //     var nextIndex = $(this).index()+1
+  //     console.log(nextIndex)
+  //     if(nextIndex==4){
+  //       nextIndex=0
+  //     }
+  //     else{
+  //       $('#gnb li').removeClass('on')
+  //       $('#gnb li:eq('+nextIndex+')').addClass('on')
+  //       //
+  //       var pos = $(this).next().position().top
+  //       $('html,body').stop().animate({scrollTop:pos})
+  //     }
+  //     }
 
 
-  })
+  // })
 // 네비
 $(window).on('scroll',function(){
   var w = window.innerWidth;
@@ -167,5 +160,21 @@ $('#btnNum span').on('click',function(){
                                    })
     }
 
-})
+});
+
+const swiper = new Swiper('.swiper-container', {
+  // Optional parameters
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
 })
