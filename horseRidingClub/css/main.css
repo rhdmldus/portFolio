@@ -1,0 +1,385 @@
+@charset "utf-8";
+@font-face {font-family: nanumL; src:url(../webfont/NanumSquare_acL.ttf);
+}
+@font-face {font-family: nanumR;
+src:url(../webfont/NanumSquare_acR.ttf);
+}
+
+/*초기화*/
+body, h1, h2, h3, h4, ul, li, p, dl, dt, dd, table, tr, th, td {margin:0; padding:0;}
+li {list-style:none;}
+a {text-decoration:none; text-transform: uppercase; color:#fff; display:block;}
+.hidden {position:absolute; left:-999999999px;}
+h2 {text-transform: uppercase; font-family: 'Open Sans', sans-serif;}
+body {overflow-x:hidden; width: 100%; height:100vh; box-sizing: border-box; max-width:1920px; }
+section {width:100%; height:100vh;}
+address {font-style: normal;}
+/* #path-1-outside-1 {
+  width:50%;
+} */
+svg {z-index:3;}
+.mainText {
+  position:absolute; top:38%; left:50%;
+  transform: translate(-50%, -50%);
+  width:50%;
+  animation: fill 0.5s ease forwards 3.5s;
+}
+.mainText path {
+  animation: line-anim 2s ease forwards;
+}
+.mainText path:nth-of-type(1){
+  stroke-dasharray: 600px;
+  stroke-dashoffset: 600px;
+}
+.mainText path:nth-of-type(2){
+  stroke-dashArray: 655px;
+  stroke-dashoffset: 655px;
+  animation-delay: 0.2s;
+}
+.mainText path:nth-of-type(3){
+  stroke-dashArray: 755px;
+  stroke-dashoffset: 755px;
+  animation-delay: 0.4s;
+
+}
+.mainText path:nth-of-type(4){
+  stroke-dashArray: 765px;
+  stroke-dashoffset: 765px;
+  animation-delay: 0.6s;
+
+}
+.mainText path:nth-of-type(5){
+  stroke-dashArray: 1088px;
+  stroke-dashoffset: 1088px;
+  animation-delay: 0.8s;
+
+}
+.mainText path:nth-of-type(6){
+  stroke-dashArray: 663px;
+  stroke-dashoffset: 663px;
+  animation-delay: 1s;
+
+}
+.mainText path:nth-of-type(7){
+  stroke-dashArray: 839px;
+  stroke-dashoffset: 839px;
+  animation-delay: 1.2s;
+
+
+}
+.mainText path:nth-of-type(8){
+  stroke-dashArray: 766px;
+  stroke-dashoffset: 766px;
+  animation-delay: 1.4s;
+
+
+}
+@keyframes line-anim {
+  to {
+    stroke-dashoffset:0;
+  }
+}
+
+
+@keyframes fill {
+  from{
+    fill:transparent;
+  }
+  to{
+    fill:#fff;
+  }
+}
+.subText {
+  position:absolute;
+  top:50%; left:50%;
+  transform: translate(-50%, -50%);
+  width:50%;
+}
+.subText path {
+  stroke-dasharray: 140px;
+
+}
+
+/* HORSE RIDING CLUB */
+
+
+
+
+
+/*header*/
+#headerWrap {position:relative; width: 100%; height:100vh;  background: url(../images/bgBack.png) no-repeat center /cover;}
+#header {width: 100%; height:7vh; display:flex; justify-content: space-between; padding: 15px 10px; z-index:90;}
+
+/* #header {position:absolute; top:0; left:0;} */
+#headerWrap::after {content:""; width:100%; height:100vh; background: linear-gradient(to bottom, transparent, black, black,#000); position:absolute; top:66%; left:0;}
+
+
+/* gnb */
+#gnb {text-align: center; padding:0 40px; flex:1}
+#gnb ul {display: flex; justify-content: center; align-items: center; height: 9vh; ;}
+#gnb li {}
+#gnb li a {font-size: 1.5em; display:block; padding:8px 20px; }
+#gnb li a:hover {color:#b59e1e; }
+#gnb li.on a {color:#b59e1e;}
+
+
+/* sns */
+#sns { width:60px; height: 180px; border-radius:20px; background:#b59e1e; display: flex;
+flex-direction: column; justify-content: space-around; align-items: center; padding:15px 0; box-sizing: border-box;}
+#sns li{
+  width: 27px; height: 27px; text-indent:-999999999px;
+  background: url(../images/snsMain.png) no-repeat;}
+#sns #k {background-position:right;}
+#sns #u {background-position:left;}
+#sns #i {background-position:center;}
+
+/* media screen */
+
+@media screen and (max-width: 500px) {
+  .mainText {top:45%;}
+
+}
+@media screen and (max-width: 978px) {
+  #header {background:#000; flex-direction:column; padding: 15px 0; height:10vh;}
+  #header h1 {background:url(../images/logofooter.png) no-repeat center/100%; width: 200px; height: 60px; margin-left:20px; position:relative; z-index:20;}
+  #header img {display:none;}
+  #gnb { position:absolute; top:-50vh;left:calc(50% - 50%); flex:0; padding:80px 10px 0; width:100%; background:#000; height:35vh;}
+  #gnb > ul {flex-direction:column; width:100%;}
+  #gnb > ul li {width:100%;}
+  #gnb > ul li:hover {background:#b59e1e;}
+  #gnb > ul li:hover a {color:#000;}
+
+  #sns {position:absolute; top:-50vh; width: 100%; height:60px; flex-direction:row; background:none; align-self:center; justify-content: center; background:#000; border-radius:0;}
+  #sns li {margin-left:20px;}
+  svg {z-index:0;}
+  #header .toggleWrap {position:absolute; top:20px; right:20px; cursor:pointer;}
+  #header .toggle {width:30px;height:40px; border-top:3px solid #fff; position:absolute; right:0;}
+  #header .toggle1 {top:10px;}
+  #header .toggle2 {top:20px;}
+  #header .toggle3 {top:30px;}
+
+}
+
+
+/* about aboutSeogwang */
+
+#aboutSeogwang {position:relative; padding: 7% 0 2%; background:#000 url(../images/aboutBg.png) no-repeat center top/cover;}
+#aboutSeogwang h2 {margin:30px 0; font-size: 40px; color:#fff; font-weight: 600; text-align:center;}
+#aboutSeogwang h2 span {font-size:60px;}
+
+#aboutSeogwang p:nth-of-type(1) {font-size:25px; color:#fff; text-align:center;}
+#aboutSeogwang p:nth-of-type(2) {padding:10px 0; font-size:20px; color:#fff; text-align:center;}
+#aboutSeogwang p:nth-of-type(2) span { color:#b59e1e;}
+
+
+/* www */
+#wwwwrap { display: flex; justify-content: center; flex-wrap: wrap}
+.wwwWrap2 {margin:30px;position:relative; width:400px; height: 420px; background:url(../images/who.png) no-repeat center top /cover;}
+#wwwwrap dl.whiteBox {position:absolute; bottom:0; left:0; width:100%; height:43%; background:#fff; box-sizing: border-box; padding: 20px 30px;}
+#wwwwrap dt {font-family: 'Open Sans', sans-serif; font-size:70px; color:#fff; text-transform:uppercase; font-weight:600; position:absolute; top:-30%; left:50%; transform: translate(-50%,-50%);}
+#wwwwrap dd {text-align:center;}
+#wwwwrap dd:nth-of-type(1) {font-size:30px;}
+#wwwwrap dd:nth-of-type(2) {font-size:20px; margin-top:20px;}
+/* who */
+
+#wwwwrap .who {background-image:url(../images/who.png)}
+
+/* with */
+#wwwwrap .with {background-image:url(../images/with.png)}
+/* where */
+#wwwwrap .where {background-image:url(../images/where.png)}
+
+@media screen and (max-width: 1395px) {
+ /* #wwwwrap dd:nth-of-type(2) {font-size:17px;} */
+ #aboutSeogwang {height: 200vh;}
+
+}
+
+@media screen and (max-width: 978px) {
+  /* #ridingPrice::before {display:none;} */
+  /* #wwwwrap {flex-direction:column;} */
+  #aboutSeogwang {height: 260vh;}
+}
+
+@media screen and (max-width: 500px) {
+ #aboutSeogwang {height: 210vh;}
+}
+
+/* ridingPrice */
+#ridingPrice {margin-top:90px; position:relative; background:linear-gradient(to bottom,transparent,#000,#000,#000)}
+#ridingPrice::before {content:"";background:linear-gradient(to bottom,transparent,#000,#000,#000); position:absolute; top:-50%; left:0;width:100%; height: 100vh;}
+
+#ridingPrice > h2 { position:relative; margin-bottom: 35px; font-size: 45px; color:#fff; font-weight: 600; text-align:center;}
+#ridingPrice > h2 span {font-size:60px;}
+#ridingPrice > p {position:relative;}
+#ridingPrice > p:nth-of-type(1) {font-size:25px; color:#fff; text-align:center;}
+#ridingPrice > p:nth-of-type(2) {padding:10px 0; font-size:20px; color:#fff; text-align:center;}
+#ridingPrice > p:nth-of-type(2) span { color:#b59e1e;}
+
+/* 코스설명 공통 */
+
+#ridingPrice section { width:100%; position:absolute; top:100px; left:0; padding: 7% 0 0 9%; color:#fff; background-color:#000; height:80vh;}
+#ridingPrice #ridingWrap {}
+#ridingPrice .textWrap {display:flex; flex-direction:column; }
+#ridingPrice section h3 {font-size:3.125rem; font-family:nanumR; margin-bottom:1%;}
+#ridingPrice section p.enT {
+  /* position:absolute; top:10%; left:8.3%; */
+  margin-bottom:1%;
+  order:-1;
+  font-size:20px; font-family:'Open Sans', sans-serif; text-transform:capitalize;
+}
+#ridingPrice section p.phrase { font-size:20px; font-family:nanumL; line-height: 30px;}
+
+/* 거리시간가격 */
+#ridingPrice div.dtcwrap { position:absolute; width:340px; display:flex; justify-content: space-between;}
+#ridingPrice div.dtcwrap::after {content:""; position:absolute; top:60px; left:28.5%; border-left:5px solid #b59e1e; border-right:5px solid #b59e1e; width:113px; height: 50px;}
+#ridingPrice section dl {font-size:20px; font-family:nanumL;}
+#ridingPrice section dl dt {width:56px;height: 53px;
+background:no-repeat center center/contain; text-indent:-999999999px; margin:50px 0 30px;}
+#ridingPrice section dl dd {text-align:center;}
+#ridingPrice section dl.distance dt { background-image:url(../images/distance.png)}
+#ridingPrice section dl.time dt { width: 76px;background-image:url(../images/time.png)}
+#ridingPrice section dl.cost dt { width: 80px; background-image:url(../images/money.png)}
+#ridingPrice section dl.cost dd {}
+#ridingPrice section img {position:absolute; top:100px; left:40%; background:no-repeat center/cover; width:60%;}
+
+
+
+/* 단거리 */
+#shortRiding {
+  z-index:1;
+}
+/* 산책코스 */
+#strollRiding{
+  /* display:none; */
+}
+
+/* 더블코스 */
+#doubleRiding{
+  /* display:none; */
+}
+
+/* 장거리코스 */
+#longRiding{
+  /* display:none; */
+}
+#ridingPrice section.on { z-index:9;}
+
+/* 좌우버튼 */
+.btn {width:30px; height: 30px; border:1px solid #fff; border-radius:50px; position:absolute; top:71%; left:0; cursor:pointer; z-index:99;}
+.btn:hover {background:#fff;}
+.btn:hover .arrow {stroke:black;}
+.prev {left:8%}
+.next {left:23%;}
+.arrow {width:10px; position:absolute; top:calc(50% - 5px); left:calc(50% - 2px); stroke:white;}
+/* btnNum */
+#btnNum {position:absolute; top:72.5%; left:13.5%; z-index:99;display:flex; justify-content:space-between; width:7%; height:2%; align-items: center; cursor: pointer;}
+#btnNum span {width: 5px; height: 5px; border:1px solid #fff; border-radius: 10px; display:block;background:#fff; text-indent:-999999px;}
+#btnNum span.on {width:12px; height: 12px; background-color:#b59e1e; border:0;}
+
+@media screen and (max-width:978px) {
+
+  #ridingPrice section {padding:0; position:absolute; top:70px; left:0; width:100%; height: 80vh;}
+  #ridingPrice section h3 {font-size:30px;}
+  #ridingPrice section p {font-size:15px !important; line-height: 25px !important;}
+  #ridingPrice section img {position:relative; top:4%; left:calc(50% - 25%); width:50%;}
+  #ridingPrice .textWrap {transform: translateY(40px);align-items: center; text-align:center;}
+  #ridingPrice div.dtcwrap {transform: translateY(20px); left: calc(50% - 170px); }
+  #ridingWrap {}
+  .prev {left:8%}
+  .next {left:85%;}
+  .arrow {z-index:20;}
+  #btnNum {position:absolute; top:75%; left:calc(50% - 6%); z-index:99;display:flex; justify-content:space-between; width:12%; height:2%; align-items: center;}
+}
+
+@media screen and (max-width: 500px) {
+  #btnNum {position:absolute; top:67vh;}
+  .btn { top:65vh;}
+  #ridingPrice {height: 80vh;}
+  #ridingPrice::before {top:-50%}
+
+}
+/* contact us */
+#contactUs {
+  position:relative;
+  padding-top:100px;
+  background: #000 url(../images/qnabg.png) no-repeat center top/cover;
+  color:#fff;
+  overflow-x:hidden;
+}
+/* url(../images/map.png) no-repeat center top/contain, */
+#contactUs::before {content:""; width:100%; height:100vh; position:absolute; background:url(../images/map.png) no-repeat right top/65%; top:10%; right:-15%;}
+
+#contactUs h2 {margin-bottom: 10%; font-size: 45px; font-weight: 600; text-align:center;}
+#contactUs p {position:relative; font-size:20px; font-family: nanumL; line-height:39px; margin: 20px 0 0 250px;}
+#contactUs a {display: inline-block; text-transform: none;}
+
+/* icon */
+#contactUs span.icon { position:absolute; top:0; left:-70px; background:no-repeat center/contain; width:39px; height: 39px; display:inline-block; text-indent:-9999999px; }
+#contactUs span.add {background-image:url(../images/add.png)}
+#contactUs span.tel {background-image:url(../images/tel.png)}
+#contactUs span.web {background-image:url(../images/web.png)}
+
+#contactUs span.bank {background-image:url(../images/bank.png)}
+
+@media screen and (max-width:978px) {
+  #contactUs {padding-top:150px;}
+  #contactUs p {margin: 2% auto; width:287px; padding:0; font-size:15px;}
+  #contactUs::before {background-position: right 20%;}
+}
+
+@media screen and (max-width: 500px) {
+  #contactUs::before {height:50vh; top:30%;}
+  #contactUs {height:52vh;}
+  #contactUs span.icon {width:20px; height:20px;top:12px; left:-38px;}
+}
+
+/* QNa */
+#qna {width:100%; padding:100px 0 10vh; color:#fff; background:#464749;}
+#qna h2 {margin-bottom: 50px; font-size: 45px; font-weight: 600; text-align:center; }
+
+#qna #table {text-align:left; width:60%; margin:auto; font-size:15px; font-family: nanumL;}
+#qna #table tbody { }
+#qna #table tr td:nth-of-type(2) { text-indent:40px; width:650px;}
+#qna #table tr td:nth-of-type(3) {width:150px;}
+
+#qna #table tr {display: block; padding:15px 0; border-bottom: 1px solid #b59e1e;}
+#qna td.status { text-align: center; line-height: 40px; width:100px; height: 40px; background:#b59e1e; color:#000; font-family:nanumR;}
+#qna td.waiting {background:#bcbcbc;}
+#qna td.notice {background:#fff;}
+
+#qna div.current {margin:30px auto; text-align: center; width:40px; height: 40px; background:#fff; color:#000; line-height:40px;}
+
+
+@media screen and (max-width:978px) {
+  #qna {padding-top:150px;}
+  #qna #table {font-size:12px; width:80%; margin:auto;}
+  #qna #table tr td:nth-of-type(2) { text-indent:3%; width:50%; overflow-x:hidden;}
+  #qna #table tr td:nth-of-type(3) {width:20%;}
+  #qna td.status { text-align: center;  width:8%; height: 10%; font-size:10px; padding:1% 2%; line-height: 15px;}
+  h2 {font-size:30px !important;}
+  h2 span {font-size:45px !important;}
+  p {font-size:15px !important;}
+
+}
+@media screen and (max-width:550px) {
+  #qna #table tr td:nth-of-type(2) { padding-left:2%; width:300px; overflow-x:hidden; }
+  #qna {padding-bottom:15vh;}
+}
+/* footer */
+#footer {background:#615510; padding:50px 0; text-align:center; color:#fff; font-family:nanumR; width:100%; font-size:20px;}
+#footer > a {text-align:center;}
+#footer > ul {display:flex; justify-content:space-between;margin:20px auto; width:200px;}
+#footer li.sns {text-indent:-999999999px; display:block; background:url(../images/sns.png) no-repeat; width: 35px; height: 35px;}
+
+#footer li.ins {background-position:left;}
+#footer li.you {background-position:center;}
+#footer li.kaka {background-position:right;}
+#footer address {line-height: 40px;}
+#footer small {text-transform:uppercase; line-height: 40px;}
+
+@media screen and (max-width:978px) {
+#footer {font-size:15px;}
+#footer img {width:20%;}
+#footer > ul {width:30%;}
+}
