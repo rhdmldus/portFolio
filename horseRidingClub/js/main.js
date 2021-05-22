@@ -61,34 +61,31 @@ $(document).ready(function(){
   // })
 // 네비
 $(window).on('scroll',function(){
-  var w = window.innerWidth;
-  console.log(w)
-
-  if($(this).scrollTop()>=$(window).height())
-  $('#header').css({position:'fixed'}).css({background:'#000'})
-  else if (w<=987){
-    return false;
+  let $header = $('.header');
+  let headerHeight = $header.height();
+  let scrollTop = $(window).scrollTop();
+  if(scrollTop > headerHeight){
+    $header.addClass('drop');
+  }
+  if(scrollTop < headerHeight) {
+    $header.removeClass('drop')
   }
 
-  else {
-    $('#header').animate({position:'absolute'}).css({background:'none'})
-
-  }
 })
 
 
-// toggle
-$('.toggleWrap').toggle(function(){
-  $('#header').css({backgroundColor:'#000'})
-  $('#gnb').animate({top:80})
-  $('#sns').animate({top:300})
-},function(){
-  $('#header').css({backgroundColor:'none'})
-  $('#gnb').animate({top:'-50vh'})
-  $('#sns').animate({top:'-50vh'})
+// // toggle
+// $('.toggleWrap').toggle(function(){
+//   $('#header').css({backgroundColor:'#000'})
+//   $('#gnb').animate({top:80})
+//   $('#sns').animate({top:300})
+// },function(){
+//   $('#header').css({backgroundColor:'none'})
+//   $('#gnb').animate({top:'-50vh'})
+//   $('#sns').animate({top:'-50vh'})
 
 
-})
+// })
 
 // 요금표
 var className, classNum
