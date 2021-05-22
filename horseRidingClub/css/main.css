@@ -12,7 +12,6 @@ a {text-decoration:none; text-transform: uppercase; color:#fff; display:block;}
 .hidden {position:absolute; left:-999999999px;}
 h2 {text-transform: uppercase; font-family: 'Open Sans', sans-serif;}
 body {overflow-x:hidden; width: 100%; height:100vh; box-sizing: border-box; max-width:1920px; }
-section {width:100%; height:100vh;}
 address {font-style: normal;}
 /* #path-1-outside-1 {
   width:50%;
@@ -189,21 +188,18 @@ flex-direction: column; justify-content: space-around; align-items: center; padd
 /* where */
 #wwwwrap .where {background-image:url(../images/where.png)}
 
-@media screen and (max-width: 1395px) {
- /* #wwwwrap dd:nth-of-type(2) {font-size:17px;} */
+/* @media screen and (max-width: 1395px) {
  #aboutSeogwang {height: 200vh;}
 
-}
-
+} */
+/* 
 @media screen and (max-width: 978px) {
-  /* #ridingPrice::before {display:none;} */
-  /* #wwwwrap {flex-direction:column;} */
   #aboutSeogwang {height: 260vh;}
 }
 
 @media screen and (max-width: 500px) {
  #aboutSeogwang {height: 210vh;}
-}
+} */
 
 /* ridingPrice */
 #ridingPrice {margin-top:90px; position:relative; background:linear-gradient(to bottom,transparent,#000,#000,#000)}
@@ -218,30 +214,30 @@ flex-direction: column; justify-content: space-around; align-items: center; padd
 
 /* 코스설명 공통 */
 
-#ridingPrice section { width:100%; position:absolute; top:100px; left:0; padding: 7% 0 0 9%; color:#fff; background-color:#000; height:80vh;}
+/* #ridingPrice .price_detail { width:100%; position:absolute; top:100px; left:0; padding: 7% 0 0 9%; color:#fff; background-color:#000; height:80vh;} */
 #ridingPrice #ridingWrap {}
 #ridingPrice .textWrap {display:flex; flex-direction:column; }
-#ridingPrice section h3 {font-size:3.125rem; font-family:nanumR; margin-bottom:1%;}
-#ridingPrice section p.enT {
-  /* position:absolute; top:10%; left:8.3%; */
-  margin-bottom:1%;
-  order:-1;
+#ridingPrice .price_detail h3 {font-size:3.125rem; font-family:nanumR; margin-bottom:1%;}
+#ridingPrice .price_detail p.enT {
+  /* position:absolute; top:0; left:0; */
+  /* margin-bottom:1%; */
+  /* order:-1; */
   font-size:20px; font-family:'Open Sans', sans-serif; text-transform:capitalize;
 }
-#ridingPrice section p.phrase { font-size:20px; font-family:nanumL; line-height: 30px;}
+#ridingPrice .price_detail p.phrase { font-size:20px; font-family:nanumL; line-height: 30px;}
 
 /* 거리시간가격 */
-#ridingPrice div.dtcwrap { position:absolute; width:340px; display:flex; justify-content: space-between;}
-#ridingPrice div.dtcwrap::after {content:""; position:absolute; top:60px; left:28.5%; border-left:5px solid #b59e1e; border-right:5px solid #b59e1e; width:113px; height: 50px;}
-#ridingPrice section dl {font-size:20px; font-family:nanumL;}
-#ridingPrice section dl dt {width:56px;height: 53px;
+#ridingPrice div.dtcwrap { position:relative;width:340px; display:flex; justify-content: space-between;}
+#ridingPrice div.dtcwrap::after {content:""; position:absolute; left:95px;bottom:53px; border-left:5px solid #b59e1e; border-right:5px solid #b59e1e; width:113px; height: 50px;}
+#ridingPrice .price_detail dl {font-size:20px; font-family:nanumL;}
+#ridingPrice .price_detail dl dt {width:56px;height: 53px;
 background:no-repeat center center/contain; text-indent:-999999999px; margin:50px 0 30px;}
-#ridingPrice section dl dd {text-align:center;}
-#ridingPrice section dl.distance dt { background-image:url(../images/distance.png)}
-#ridingPrice section dl.time dt { width: 76px;background-image:url(../images/time.png)}
-#ridingPrice section dl.cost dt { width: 80px; background-image:url(../images/money.png)}
-#ridingPrice section dl.cost dd {}
-#ridingPrice section img {position:absolute; top:100px; left:40%; background:no-repeat center/cover; width:60%;}
+#ridingPrice .price_detail dl dd {text-align:center;}
+#ridingPrice .price_detail dl.distance dt { background-image:url(../images/distance.png)}
+#ridingPrice .price_detail dl.time dt { width: 76px;background-image:url(../images/time.png)}
+#ridingPrice .price_detail dl.cost dt { width: 80px; background-image:url(../images/money.png)}
+#ridingPrice .price_detail dl.cost dd {}
+#ridingPrice .price_detail img {position:absolute; top:100px; left:40%; background:no-repeat center/cover; width:60%;}
 
 
 
@@ -263,7 +259,7 @@ background:no-repeat center center/contain; text-indent:-999999999px; margin:50p
 #longRiding{
   /* display:none; */
 }
-#ridingPrice section.on { z-index:9;}
+#ridingPrice .price_detail.on { z-index:9;}
 
 /* 좌우버튼 */
 .btn {width:30px; height: 30px; border:1px solid #fff; border-radius:50px; position:absolute; top:71%; left:0; cursor:pointer; z-index:99;}
@@ -292,13 +288,13 @@ background:no-repeat center center/contain; text-indent:-999999999px; margin:50p
   #btnNum {position:absolute; top:75%; left:calc(50% - 6%); z-index:99;display:flex; justify-content:space-between; width:12%; height:2%; align-items: center;}
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
   #btnNum {position:absolute; top:67vh;}
   .btn { top:65vh;}
   #ridingPrice {height: 80vh;}
   #ridingPrice::before {top:-50%}
 
-}
+} */
 /* contact us */
 #contactUs {
   position:relative;
@@ -322,7 +318,7 @@ background:no-repeat center center/contain; text-indent:-999999999px; margin:50p
 
 #contactUs span.bank {background-image:url(../images/bank.png)}
 
-@media screen and (max-width:978px) {
+/* @media screen and (max-width:978px) {
   #contactUs {padding-top:150px;}
   #contactUs p {margin: 2% auto; width:287px; padding:0; font-size:15px;}
   #contactUs::before {background-position: right 20%;}
@@ -332,7 +328,7 @@ background:no-repeat center center/contain; text-indent:-999999999px; margin:50p
   #contactUs::before {height:50vh; top:30%;}
   #contactUs {height:52vh;}
   #contactUs span.icon {width:20px; height:20px;top:12px; left:-38px;}
-}
+} */
 
 /* QNa */
 #qna {width:100%; padding:100px 0 10vh; color:#fff; background:#464749;}
@@ -351,7 +347,7 @@ background:no-repeat center center/contain; text-indent:-999999999px; margin:50p
 #qna div.current {margin:30px auto; text-align: center; width:40px; height: 40px; background:#fff; color:#000; line-height:40px;}
 
 
-@media screen and (max-width:978px) {
+/* @media screen and (max-width:978px) {
   #qna {padding-top:150px;}
   #qna #table {font-size:12px; width:80%; margin:auto;}
   #qna #table tr td:nth-of-type(2) { text-indent:3%; width:50%; overflow-x:hidden;}
@@ -365,7 +361,7 @@ background:no-repeat center center/contain; text-indent:-999999999px; margin:50p
 @media screen and (max-width:550px) {
   #qna #table tr td:nth-of-type(2) { padding-left:2%; width:300px; overflow-x:hidden; }
   #qna {padding-bottom:15vh;}
-}
+} */
 /* footer */
 #footer {background:#615510; padding:50px 0; text-align:center; color:#fff; font-family:nanumR; width:100%; font-size:20px;}
 #footer > a {text-align:center;}
@@ -378,8 +374,41 @@ background:no-repeat center center/contain; text-indent:-999999999px; margin:50p
 #footer address {line-height: 40px;}
 #footer small {text-transform:uppercase; line-height: 40px;}
 
-@media screen and (max-width:978px) {
+/* @media screen and (max-width:978px) {
 #footer {font-size:15px;}
 #footer img {width:20%;}
 #footer > ul {width:30%;}
+} */
+
+
+.swiper-container {
+  width: 80%;
+  height: 460px;
 }
+.price_detail{
+  color:#fff;
+  display:inline-block;
+  vertical-align: top;
+  margin:20px;
+  
+}
+/* .swiper-slide {width:100% !important;} */
+.swiper-slide .img_wrap{
+  /* position: absolute; */
+  top:0;
+  right:0;
+  width:60%;
+  display:inline-block;
+  margin-top:20px;
+
+}
+.swiper-slide img{
+  width:100%;
+}
+
+.swiper-container .swiper-button-next, .swiper-container .swiper-button-prev {
+  top:auto;
+  
+}
+.btn_wrap {position: absolute;top:50%;left:50%;transform:translate(-50%,-50%);margin:auto;width:90%;}
+.btn {border-radius: 50px;}
