@@ -6,6 +6,7 @@ src:url(../webfont/NanumSquare_acR.ttf);
 }
 
 /*초기화*/
+body{min-width:1180px;}
 body, h1, h2, h3, h4, ul, li, p, dl, dt, dd, table, tr, th, td {margin:0; padding:0;}
 li {list-style:none;}
 a {text-decoration:none; text-transform: uppercase; color:#fff; display:block;}
