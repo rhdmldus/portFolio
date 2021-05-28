@@ -239,7 +239,7 @@ background:no-repeat center center/contain; text-indent:-999999999px; margin:50p
   position:relative;
   padding:200px 0;
   /* background: #000 url(../images/qnabg.png) no-repeat center top, url(../images/map.png) no-repeat right top; */
-  background-image:url(/images/map.png),url(/images/qnabg.png);
+  background-image:url(../images/map.png),url(../images/qnabg.png);
   background-repeat:no-repeat;
   background-size:65%,cover;
   background-position:calc(100% + 100px) 50%,center center;
