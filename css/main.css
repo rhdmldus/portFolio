@@ -107,7 +107,7 @@ svg {z-index:3;}
 
 
 /*header*/
-#headerWrap {position:relative; width: 100%; height:100vh;  background: url(/images/bgBack.png) no-repeat center /cover;}
+#headerWrap {position:relative; width: 100%; height:100vh;  background: url(../images/bgBack.png) no-repeat center /cover;}
 #header {width: 100%; height:60px; display:flex; justify-content: space-between; padding: 15px 10px; z-index:90;}
 .header.drop {position:fixed;top:0;left:0;background:#000;animation:dropDown 0.3s}
 @keyframes dropDown {
@@ -136,7 +136,7 @@ svg {z-index:3;}
 flex-direction: column; justify-content: space-around; align-items: center; padding:15px 0; box-sizing: border-box;z-index:20;}
 #sns li{
   width: 27px; height: 27px; text-indent:-999999999px;
-  background: url(/images/snsMain.png) no-repeat;}
+  background: url(../images/snsMain.png) no-repeat;}
 #sns #k {background-position:right;}
 #sns #u {background-position:left;}
 #sns #i {background-position:center;}
@@ -146,7 +146,7 @@ flex-direction: column; justify-content: space-around; align-items: center; padd
 
 /* about aboutSeogwang */
 
-#aboutSeogwang {position:relative; padding: 40px 0; background:#000 url(/images/aboutBg.png) no-repeat center top/cover;}
+#aboutSeogwang {position:relative; padding: 40px 0; background:#000 url(../images/aboutBg.png) no-repeat center top/cover;}
 #aboutSeogwang h2 {margin:30px 0; font-size:2.5rem; color:#fff; font-weight: 600; text-align:center;}
 #aboutSeogwang h2 span {font-size:3.75rem;}
 
@@ -157,7 +157,7 @@ flex-direction: column; justify-content: space-around; align-items: center; padd
 
 /* www */
 #wwwwrap {display: flex; justify-content: center; flex-wrap: wrap;padding:100px 0}
-.wwwWrap2 {margin:30px;position:relative; width:400px; height: 420px; background:url(/images/who.png) no-repeat center top /cover;}
+.wwwWrap2 {margin:30px;position:relative; width:400px; height: 420px; background:url(../images/who.png) no-repeat center top /cover;}
 #wwwwrap dl.whiteBox {position:absolute; bottom:0; left:0; width:100%; height:43%; background:#fff; box-sizing: border-box; padding: 20px 30px;}
 #wwwwrap dt {font-family: 'Open Sans', sans-serif; font-size:4.375rem; color:#fff; text-transform:uppercase; font-weight:600; position:absolute; top:-30%; left:50%; transform: translate(-50%,-50%);}
 #wwwwrap dd {text-align:center;}
@@ -165,12 +165,12 @@ flex-direction: column; justify-content: space-around; align-items: center; padd
 #wwwwrap dd:nth-of-type(2) {font-size:1.25rem; margin-top:20px;}
 /* who */
 
-#wwwwrap .who {background-image:url(/images/who.png)}
+#wwwwrap .who {background-image:url(../images/who.png)}
 
 /* with */
-#wwwwrap .with {background-image:url(/images/with.png)}
+#wwwwrap .with {background-image:url(../images/with.png)}
 /* where */
-#wwwwrap .where {background-image:url(/images/where.png)}
+#wwwwrap .where {background-image:url(../images/where.png)}
 
 
 /* ridingPrice */
@@ -205,9 +205,9 @@ flex-direction: column; justify-content: space-around; align-items: center; padd
 #ridingPrice .price_detail dl dt {width:56px;height: 53px;
 background:no-repeat center center/contain; text-indent:-999999999px; margin:50px 0 30px;}
 #ridingPrice .price_detail dl dd {text-align:center;}
-#ridingPrice .price_detail dl.distance dt { background-image:url(/images/distance.png)}
-#ridingPrice .price_detail dl.time dt { width: 76px;background-image:url(/images/time.png)}
-#ridingPrice .price_detail dl.cost dt { width: 80px; background-image:url(/images/money.png)}
+#ridingPrice .price_detail dl.distance dt { background-image:url(../images/distance.png)}
+#ridingPrice .price_detail dl.time dt { width: 76px;background-image:url(../images/time.png)}
+#ridingPrice .price_detail dl.cost dt { width: 80px; background-image:url(../images/money.png)}
 #ridingPrice .price_detail dl.cost dd {}
 #ridingPrice .price_detail img {position:absolute; top:100px; left:40%; background:no-repeat center/cover; width:60%;}
 
@@ -239,7 +239,7 @@ background:no-repeat center center/contain; text-indent:-999999999px; margin:50p
   position:relative;
   padding:200px 0;
   /* background: #000 url(../images/qnabg.png) no-repeat center top, url(../images/map.png) no-repeat right top; */
-  background-image:url(/images/map.png),url(/images/qnabg.png);
+  background-image:url(/horseRidingClub/images/map.png),url(/horseRidingClub/images/qnabg.png);
   background-repeat:no-repeat;
   background-size:65%,cover;
   background-position:calc(100% + 100px) 50%,center center;
@@ -255,11 +255,11 @@ background:no-repeat center center/contain; text-indent:-999999999px; margin:50p
 
 /* icon */
 #contactUs span.icon { position:absolute; top:0; left:-70px; background:no-repeat center/contain; width:39px; height: 39px; display:inline-block; text-indent:-9999999px; }
-#contactUs span.add {background-image:url(/images/add.png)}
-#contactUs span.tel {background-image:url(/images/tel.png)}
-#contactUs span.web {background-image:url(/images/web.png)}
+#contactUs span.add {background-image:url(../images/add.png)}
+#contactUs span.tel {background-image:url(../images/tel.png)}
+#contactUs span.web {background-image:url(../images/web.png)}
 
-#contactUs span.bank {background-image:url(/images/bank.png)}
+#contactUs span.bank {background-image:url(../images/bank.png)}
 
 
 /* QNa */
@@ -284,7 +284,7 @@ background:no-repeat center center/contain; text-indent:-999999999px; margin:50p
 #footer {background:#615510; padding:50px 0; text-align:center; color:#fff; font-family:nanumR; width:100%; font-size:20px;}
 #footer > a {text-align:center;}
 #footer > ul {display:flex; justify-content:space-between;margin:20px auto; width:200px;}
-#footer li.sns {text-indent:-999999999px; display:block; background:url(/images/sns.png) no-repeat; width: 35px; height: 35px;}
+#footer li.sns {text-indent:-999999999px; display:block; background:url(../images/sns.png) no-repeat; width: 35px; height: 35px;}
 
 #footer li.ins {background-position:left;}
 #footer li.you {background-position:center;}
